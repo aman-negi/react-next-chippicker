@@ -1,0 +1,29 @@
+        {chips.map((chip) => (
+          <div
+            className="chip inline-flex items-center bg-gray-300  pl-3 pr-1 py-1 rounded-full"
+            key={chip}
+          >
+            {chip}
+            <span
+              className="close ml-2 cursor-pointer hover:bg-gray-400 hover:shadow-lg rounded-full px-2.5 py-1 m--1"
+              onClick={() => removeChip(chip)}
+            >
+              X
+            </span>
+          </div>
+        ))}
+
+
+
+        // The main app component
+const Home = () => {
+  return (
+    <div className="p-20 bg-white">
+      <center><h1 className="text-3xl font-bold text-blue-500">Pick Users</h1></center>
+      
+      <InputChips items={items} />
+    </div>
+  );
+};
+
+export default Home;
